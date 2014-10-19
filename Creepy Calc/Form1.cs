@@ -19,16 +19,16 @@ namespace Creepy_Calc
 
         private void button1_Click(object sender, EventArgs e)
         {
-            decimal age1 = numericUpDown1.Value;
+            decimal age1 = numericUpDown3.Value;
             decimal age2 = numericUpDown2.Value;
-            decimal ageLargest = 0;
-            decimal ageSmallest = 0;
-            if (age1 > age2)
+            decimal ageLargest = 1;
+            decimal ageSmallest = 1;
+            if (age1 > age2) 
             {
                 ageLargest = age1;
                 ageSmallest = age2;
             }
-            else
+            if (age2 > age1)
             {
                 ageLargest = age2;
                 ageSmallest = age1;
@@ -37,10 +37,18 @@ namespace Creepy_Calc
             string minAgeString = minAge.ToString();
 
             label3.Text = minAgeString;
+            Console.WriteLine(" " + ageLargest);
+            Console.WriteLine(" " + ageSmallest);
+            Console.WriteLine(" " + age1);
+            Console.WriteLine(" " + age2);
 
             if (ageSmallest < minAge)
             {
                 MessageBox.Show("this relationship is creepy! \nBeware!");
+            }
+            if (ageSmallest > minAge)
+            {
+                MessageBox.Show("this relationship is not creepy! \nDon't have too much fun you crazy kids!");
             }
                 
         }

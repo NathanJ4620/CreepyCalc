@@ -8,8 +8,8 @@ namespace Creepy_Calc
 {
     class Creepy
     {
-        private decimal age1;
-        private decimal age2;
+        public decimal age1;
+        public decimal age2;
         private decimal ageLargest;
         private decimal ageSmallest;
         private decimal minAge;
