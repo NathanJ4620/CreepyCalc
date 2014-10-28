@@ -46,7 +46,7 @@ namespace Creepy_Calc
             {
                 MessageBox.Show("this relationship is creepy! \nBeware!");
             }
-            if (ageSmallest > minAge)
+            if (ageSmallest >= minAge)
             {
                 MessageBox.Show("this relationship is not creepy! \nDon't have too much fun you crazy kids!");
             }
