@@ -23,19 +23,19 @@ namespace Creepy_Calc
             Calc AgeCalc = new Calc();
             AgeCalc.Age1 = numericUpDown3.Value;
             AgeCalc.Age2 = numericUpDown2.Value;
-            decimal ageLargest = 1;
-            decimal ageSmallest = 1;
-            if (AgeCalc.Age1 > AgeCalc.Age2) 
-            {
-                ageLargest = AgeCalc.Age1;
-                ageSmallest = AgeCalc.Age2;
-            }
-            if (AgeCalc.Age2 > AgeCalc.Age1)
-            {
-                ageLargest = AgeCalc.Age2;
-                ageSmallest = AgeCalc.Age1;
-            }
-            decimal minAge = ageLargest / 2 + 7;
+            //decimal ageLargest = 1;
+            //decimal ageSmallest = 1;
+            //if (AgeCalc.Age1 > AgeCalc.Age2) 
+            //{
+            //    ageLargest = AgeCalc.Age1;
+            //    ageSmallest = AgeCalc.Age2;
+            //}
+            //if (AgeCalc.Age2 > AgeCalc.Age1)
+            //{
+            //    ageLargest = AgeCalc.Age2;
+            //    ageSmallest = AgeCalc.Age1;
+            //}
+            decimal minAge = AgeCalc.Oldest / 2 + 7;
             string minAgeString = minAge.ToString();
 
             label3.Text = minAgeString;
@@ -44,15 +44,15 @@ namespace Creepy_Calc
             //Console.WriteLine(" " + AgeCalc.Age1);
             //Console.WriteLine(" " + AgeCalc.Age2);
 
-            if (ageSmallest < minAge)
+            if (AgeCalc.Youngest < minAge)
             {
                 MessageBox.Show("this relationship is creepy! \nBeware!");
             }
-            if (ageSmallest >= minAge)
+            if (AgeCalc.Youngest >= minAge)
             {
                 MessageBox.Show("this relationship is not creepy! \nDon't have too much fun you crazy kids!");
             }
-            MessageBox.Show(AgeCalc.Age1.ToString());
+            MessageBox.Show(AgeCalc.Oldest.ToString() + "/n" + AgeCalc.Age1.ToString());
                 
         }
     }

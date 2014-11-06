@@ -29,9 +29,27 @@ namespace Creepy_Calc
         }
         public decimal Oldest
         {
-            get { return this.oldest; }
+            get {   if (age1 > age2)
+                {
+                    return this.oldest = age1;
+                    
+                }
+                if (age1 < age2)
+                {
+                   return this.oldest = age2;
+                    
+                }
+           
+            }
+            set
+            {
+                this.oldest = value;
+            }
         }
-        
+        public decimal Youngest
+        {
+            get { return this.youngest; }
+        }
         
 	
     }
