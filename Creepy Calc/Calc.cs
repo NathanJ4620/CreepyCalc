@@ -62,7 +62,36 @@ namespace Creepy_Calc
 
             }
         }
-        
+        public decimal MinAge
+        {
+            get
+            {
+                return oldest / 2 + 7;
+            }
+        }
+        public bool Iscreepy
+        {
+            get
+            {
+                if (youngest >= minage)
+                {
+                    isCreepy = false;
+                    return isCreepy;
+                }
+                else
+                {
+                    isCreepy = true;
+                    return isCreepy;
+                }
+            }
+        }
+        public decimal AgeGap
+        {
+            get
+            {
+                return oldest - youngest;
+            }
+        }
 	
     }
 }
