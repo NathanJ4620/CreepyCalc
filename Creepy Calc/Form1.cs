@@ -38,21 +38,21 @@ namespace Creepy_Calc
             decimal minAge = AgeCalc.Oldest / 2 + 7;
             string minAgeString = minAge.ToString();
 
-            label3.Text = minAgeString;
+            label3.Text = AgeCalc.MinAge.ToString();
             //Console.WriteLine(" " + ageLargest);
             //Console.WriteLine(" " + ageSmallest);
             //Console.WriteLine(" " + AgeCalc.Age1);
             //Console.WriteLine(" " + AgeCalc.Age2);
 
-            if (AgeCalc.Youngest < minAge)
+            if (AgeCalc.Youngest < AgeCalc.MinAge)
             {
                 MessageBox.Show("this relationship is creepy! \nBeware!");
             }
-            if (AgeCalc.Youngest >= minAge)
+            if (AgeCalc.Youngest >= AgeCalc.MinAge)
             {
                 MessageBox.Show("this relationship is not creepy! \nDon't have too much fun you crazy kids!");
             }
-            MessageBox.Show(AgeCalc.Oldest.ToString() + "/n" + AgeCalc.Age1.ToString());
+            //MessageBox.Show(AgeCalc.Oldest.ToString() + "/n" + AgeCalc.Age1.ToString());
                 
         }
     }

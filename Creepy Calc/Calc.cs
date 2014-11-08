@@ -30,18 +30,20 @@ namespace Creepy_Calc
         public decimal Oldest
         {
             get {   if (age1 > age2)
-                {
+            {
+                oldest = age1;
                     return age1;
+                    
             }
                 
                 else
             {
+                oldest = age2;
                 return age2;
             }
                 
-                
-           
             }
+            
 
         }
         public decimal Youngest
@@ -50,11 +52,13 @@ namespace Creepy_Calc
             {
                 if (age1 > age2)
                 {
+                    youngest = age2;
                     return age2;
                 }
 
                 else
                 {
+                    youngest = age2;
                     return age1;
                 }
 
@@ -67,6 +71,10 @@ namespace Creepy_Calc
             get
             {
                 return oldest / 2 + 7;
+            }
+            set
+            {
+                minage = value;
             }
         }
         public bool Iscreepy
@@ -89,7 +97,8 @@ namespace Creepy_Calc
         {
             get
             {
-                return oldest - youngest;
+                ageGap = oldest - youngest;
+                return ageGap;
             }
         }
 	
