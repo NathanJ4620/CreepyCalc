@@ -81,7 +81,7 @@ namespace Creepy_Calc
         {
             get
             {
-                if (youngest >= minage)
+                if (Youngest >= MinAge)
                 {
                     isCreepy = false;
                     return isCreepy;

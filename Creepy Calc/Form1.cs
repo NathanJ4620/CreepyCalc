@@ -20,39 +20,25 @@ namespace Creepy_Calc
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Calc AgeCalc = new Calc();
-            AgeCalc.Age1 = numericUpDown3.Value;
+            Calc AgeCalc = new Calc(); //Defines the new Creepy calculator
+
+            //The next two variables define where to get the values for the ages of the persons in the relationship
+            AgeCalc.Age1 = numericUpDown3.Value; 
             AgeCalc.Age2 = numericUpDown2.Value;
-            //decimal ageLargest = 1;
-            //decimal ageSmallest = 1;
-            //if (AgeCalc.Age1 > AgeCalc.Age2) 
-            //{
-            //    ageLargest = AgeCalc.Age1;
-            //    ageSmallest = AgeCalc.Age2;
-            //}
-            //if (AgeCalc.Age2 > AgeCalc.Age1)
-            //{
-            //    ageLargest = AgeCalc.Age2;
-            //    ageSmallest = AgeCalc.Age1;
-            //}
-            decimal minAge = AgeCalc.Oldest / 2 + 7;
-            string minAgeString = minAge.ToString();
 
-            label3.Text = AgeCalc.MinAge.ToString();
-            //Console.WriteLine(" " + ageLargest);
-            //Console.WriteLine(" " + ageSmallest);
-            //Console.WriteLine(" " + AgeCalc.Age1);
-            //Console.WriteLine(" " + AgeCalc.Age2);
 
-            if (AgeCalc.Youngest < AgeCalc.MinAge)
+            label3.Text = AgeCalc.MinAge.ToString(); //allows the GUI to display the value of AgeCalc.MinAge by changing the decimal to a string
+            
+            //these two if statements control the display of a message box alerting the user to weather their relationship is creepy or not
+            if (AgeCalc.Iscreepy == true)
             {
                 MessageBox.Show("this relationship is creepy! \nBeware!");
             }
-            if (AgeCalc.Youngest >= AgeCalc.MinAge)
+            if (AgeCalc.Iscreepy == false)
             {
                 MessageBox.Show("this relationship is not creepy! \nDon't have too much fun you crazy kids!");
             }
-            //MessageBox.Show(AgeCalc.Oldest.ToString() + "/n" + AgeCalc.Age1.ToString());
+            
                 
         }
     }
