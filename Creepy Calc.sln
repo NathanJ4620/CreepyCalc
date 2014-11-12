@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Creepy Calc", "Creepy Calc\Creepy Calc.csproj", "{FDAAC4FF-6373-422A-9297-483A310B2203}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E3F33661-67E3-4F64-BA14-9C2D2E80A67A}"
+	ProjectSection(SolutionItems) = preProject
+		Creepy Calc\README.txt = Creepy Calc\README.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
